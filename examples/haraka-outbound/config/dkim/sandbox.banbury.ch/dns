@@ -1,0 +1,26 @@
+
+Add this TXT record to the sandbox.banbury.ch DNS zone.
+
+dec2016._domainkey TXT "v=DKIM1;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA50z7IXv2fMaQxXEcxFlSvpvTHEcIIaZIkacQFhpyVX4/ZlmgBM8G2brgkprcIq5rPFSlGye7NwGTqhMWKQsiOVIhv0uFukocoibnFEkmPtiGKj6I0spXi/XictDVyQHUKnB/uikmoV8+zWqYqbhRFehkg5BGWwRHVt7S0/qNxyzTZiu0j3VKRobxV1DNArzWlZG8habpF+7WGp0z61A3Ircr3rVOYupgX/7SPVZ6Lvc0DUzURGPiilBGWLfDwI6wEJ1qj+ZsuMutKojPD1kWbKRGD+DZ6cxQsFTqopJ3RY58oyNNVmNYoaJTjO4v+wZBtSsF6WlfNpavRz56l5/9/wIDAQAB"
+
+Tell the world that the ONLY mail servers that send mail from this domain are DKIM signed and/or bear our MX and A records.
+
+With SPF:
+
+        SPF "v=spf1 mx a -all"
+        TXT "v=spf1 mx a -all"
+
+With DMARC:
+
+_dmarc  TXT "v=DMARC1; p=reject; adkim=s; aspf=r; rua=mailto:dmarc-feedback@sandbox.banbury.ch; ruf=mailto:dmarc-feedback@sandbox.banbury.ch; pct=100"
+
+With DomainKeys (deprecated)
+
+_domainkey TXT "o=-; t=y; r=postmaster@sandbox.banbury.ch"
+
+For more information about DKIM and SPF policy, the documentation within each plugin contains a longer discussion and links to more detailed information:
+
+   haraka -h dkim_sign
+   haraka -h spf
+
+
