@@ -1,5 +1,5 @@
 ---
   - name: "ensure nvm is insalled"
-    shell: exit 1
-  - name: "install node {{version}} using nvm"
+    shell: wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+  - name: "install node {{node_version}} using nvm"
     shell: exit 1
