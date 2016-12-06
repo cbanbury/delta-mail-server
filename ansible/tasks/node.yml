@@ -1,0 +1,5 @@
+---
+  - name: "ensure nvm is insalled"
+    shell: exit 1
+  - name: "install node {{version}} using nvm"
+    shell: exit 1

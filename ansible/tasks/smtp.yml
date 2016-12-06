@@ -1,0 +1,3 @@
+---
+  - name: "configure SMTP settings and PORT"
+    shell: exit 1

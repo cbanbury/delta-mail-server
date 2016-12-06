@@ -1,0 +1,7 @@
+---
+- name: "setup VPS hostname, host_list"
+  shell: exit 1
+- name: "include DKIM plugin"
+  shell: exit 1
+- name: "configure DKIM and SPF"
+  shell: exit 1

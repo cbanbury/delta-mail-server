@@ -1,0 +1,9 @@
+---
+- name: "add authentication method to plugins"
+  shell: exit 1
+- name: "setup credenials for authentication"
+  shell: exit 1
+- name: "require tls in plugins for authentication"
+  shell: exit 1
+- name: "generate letsencrypt TLS certs"
+  shell: exit 1

@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - include: tasks/node.yml
+    - include: tasks/haraka-install.yml
+
+      # plugin configuration
+    - include: tasks/smtp.yml
+    - include: tasks/authentication.yml
+    - include: tasks/dns.yml

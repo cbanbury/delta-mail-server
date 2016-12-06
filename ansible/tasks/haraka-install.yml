@@ -1,0 +1,5 @@
+---
+  - name: "install haraka globally"
+    shell: exit 1
+  - name: "create blank haraka configuration"
+    shell: exit 1
